@@ -7,7 +7,6 @@ import (
 )
 
 func main() {
-	// http.Handle("/", templ.Handler(views.dog("willoh")))
-	// http.ListenAndServe(":8080", nil)
-	views.Bar()
+	http.Handle("/", templ.Handler(views.Parent()))
+	http.ListenAndServe(":8080", nil)
 }
